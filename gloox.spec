@@ -1,5 +1,5 @@
 %define name gloox
-%define version 0.8.7
+%define version 0.8.8 
 %define release %mkrel 1
 
 %define lib_major 0
