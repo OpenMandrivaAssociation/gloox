@@ -1,17 +1,16 @@
-%define _requires_exceptions libresolv.so.2(GLIBC_PRIVATE)
+#%define _requires_exceptions libresolv.so.2(GLIBC_PRIVATE)
 
-%define lib_major       4
+%define lib_major       7
 %define lib_name        %mklibname %{name} %{lib_major}
 %define lib_name_d      %mklibname %{name} %{lib_major} -d
 %define lib_name_d_s    %mklibname %{name} %{lib_major} -d -s
 
-# select between GNUTLS or OpenSSL
 %bcond_with     gnutls
 
 Summary:        C++ Jabber/XMPP library
 Name:           gloox
-Version:        0.8.8
-Release:        %mkrel 3
+Version:        0.9.1
+Release:        %mkrel 1
 URL:            http://camaya.net/gloox/
 Source0:        http://camaya.net/download/%{name}-%{version}.tar.bz2
 License:        GPL
@@ -78,7 +77,7 @@ Headers for %{name} librairies.
 
 %install
 %{__rm} -rf %{buildroot}
-%{makeinstall}
+%{makeinstall_std}
 
 %clean
 %{__rm} -rf %{buildroot}
@@ -94,11 +93,11 @@ Headers for %{name} librairies.
 
 %files -n %{lib_name_d}
 %defattr(-,root,root)
-%{_includedir}/*
-%exclude %{_libdir}/lib*%{name}*.la
+%{_bindir}/gloox-config
+%{_includedir}/gloox/
+%{_libdir}/lib*%{name}*.la
 %{_libdir}/lib*%{name}.so
-%{_libdir}/pkgconfig/*
-%{_bindir}/*
+%{_libdir}/pkgconfig/gloox.pc
 
 %files -n %{lib_name_d_s}
 %defattr(-,root,root)
