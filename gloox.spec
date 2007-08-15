@@ -43,7 +43,6 @@ Provides:       %{name} = %{version}-%{release}
 Summary:        Headers for %{name}
 Group:          Networking/Instant messaging
 Provides:       lib%{name}-devel = %{version}-%{release}
-Provides:       %{_lib}%{name}-devel = %{version}-%{release}
 Provides:       %{name}-devel = %{version}-%{release}
 Requires:       %{lib_name} = %{version}-%{release}
 Obsoletes:	%lib_name-devel
@@ -55,7 +54,6 @@ Headers for %{name} librairies.
 Summary:        Static libraries for %{name}
 Group:          Networking/Instant messaging
 Provides:       lib%{name}-static-devel = %{version}-%{release}
-Provides:       %{_lib}%{name}-static-devel = %{version}-%{release}
 Provides:       %{name}-static-devel = %{version}-%{release}
 Requires:       %{lib_name_d} = %{version}-%{release}
 Obsoletes:	%lib_name-static-devel
