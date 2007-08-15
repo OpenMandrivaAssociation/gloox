@@ -2,14 +2,14 @@
 
 %define lib_major       7
 %define lib_name        %mklibname %{name} %{lib_major}
-%define lib_name_d      %mklibname %{name} %{lib_major} -d
-%define lib_name_d_s    %mklibname %{name} %{lib_major} -d -s
+%define lib_name_d      %mklibname %{name} -d
+%define lib_name_d_s    %mklibname %{name} -d -s
 
 %bcond_with     gnutls
 
 Summary:        C++ Jabber/XMPP library
 Name:           gloox
-Version:        0.9.3
+Version:        0.9.4.1
 Release:        %mkrel 1
 URL:            http://camaya.net/gloox/
 Source0:        http://camaya.net/download/gloox-%{version}.tar.bz2
@@ -46,6 +46,7 @@ Provides:       lib%{name}-devel = %{version}-%{release}
 Provides:       %{_lib}%{name}-devel = %{version}-%{release}
 Provides:       %{name}-devel = %{version}-%{release}
 Requires:       %{lib_name} = %{version}-%{release}
+Obsoletes:	%lib_name-devel
 
 %description -n %{lib_name_d}
 Headers for %{name} librairies.
@@ -57,6 +58,7 @@ Provides:       lib%{name}-static-devel = %{version}-%{release}
 Provides:       %{_lib}%{name}-static-devel = %{version}-%{release}
 Provides:       %{name}-static-devel = %{version}-%{release}
 Requires:       %{lib_name_d} = %{version}-%{release}
+Obsoletes:	%lib_name-static-devel
 
 %description -n %{lib_name_d_s}
 Headers for %{name} librairies.
@@ -89,7 +91,7 @@ Headers for %{name} librairies.
 %files -n %{lib_name}
 %defattr(-,root,root)
 %doc AUTHORS COPYING 
-%{_libdir}/lib*%{name}.so.*
+%{_libdir}/lib*%{name}.so.%{lib_major}*
 
 %files -n %{lib_name_d}
 %defattr(-,root,root)
