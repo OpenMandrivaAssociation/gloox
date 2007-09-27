@@ -7,10 +7,10 @@
 
 %bcond_with     gnutls
 
-Summary:        C++ Jabber/XMPP library
 Name:           gloox
-Version:        0.9.4.1
+Version:        0.9.5
 Release:        %mkrel 1
+Summary:        C++ Jabber/XMPP library
 URL:            http://camaya.net/gloox/
 Source0:        http://camaya.net/download/gloox-%{version}.tar.bz2
 License:        GPL
@@ -45,7 +45,7 @@ Group:          Networking/Instant messaging
 Provides:       lib%{name}-devel = %{version}-%{release}
 Provides:       %{name}-devel = %{version}-%{release}
 Requires:       %{lib_name} = %{version}-%{release}
-Obsoletes:	%lib_name-devel
+Obsoletes:      %lib_name-devel
 
 %description -n %{lib_name_d}
 Headers for %{name} librairies.
@@ -56,7 +56,7 @@ Group:          Networking/Instant messaging
 Provides:       lib%{name}-static-devel = %{version}-%{release}
 Provides:       %{name}-static-devel = %{version}-%{release}
 Requires:       %{lib_name_d} = %{version}-%{release}
-Obsoletes:	%lib_name-static-devel
+Obsoletes:      %lib_name-static-devel
 
 %description -n %{lib_name_d_s}
 Headers for %{name} librairies.
