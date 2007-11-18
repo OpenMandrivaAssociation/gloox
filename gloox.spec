@@ -13,7 +13,7 @@ Release:        %mkrel 1
 Summary:        C++ Jabber/XMPP library
 URL:            http://camaya.net/gloox/
 Source0:        http://camaya.net/download/%{name}-%{version}.tar.bz2
-License:        GPL
+License:        GPLv2+
 Group:          Networking/Remote access
 BuildRequires:  libidn-devel
 BuildRequires:  libiksemel-devel
@@ -45,7 +45,9 @@ Group:          Networking/Instant messaging
 Provides:       lib%{name}-devel = %{version}-%{release}
 Provides:       %{name}-devel = %{version}-%{release}
 Requires:       %{lib_name} = %{version}-%{release}
-Obsoletes:      %lib_name-devel
+Obsoletes:      %mklibname -d gloox 7
+Obsoletes:	%mklibname -d gloox 4
+Obsoletes:	%mklibname -d gllox 0
 
 %description -n %{lib_name_d}
 Headers for %{name} librairies.
@@ -56,7 +58,9 @@ Group:          Networking/Instant messaging
 Provides:       lib%{name}-static-devel = %{version}-%{release}
 Provides:       %{name}-static-devel = %{version}-%{release}
 Requires:       %{lib_name_d} = %{version}-%{release}
-Obsoletes:      %lib_name-static-devel
+Obsoletes:      %mklibname -d -s gloox 7
+Obsoletes:      %mklibname -d -s gloox 4
+Obsoletes:      %mklibname -d -s gllox 0
 
 %description -n %{lib_name_d_s}
 Headers for %{name} librairies.
