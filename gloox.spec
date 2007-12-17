@@ -22,7 +22,6 @@ BuildRequires:  libgnutls-devel
 %else
 BuildRequires:  libopenssl-devel
 %endif
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
 gloox is a C++ Jabber/XMPP library which takes care of the
