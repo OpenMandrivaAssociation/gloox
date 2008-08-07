@@ -9,7 +9,7 @@
 
 Name:           gloox
 Version:        0.9.9.5
-Release:        %mkrel 1
+Release:        %mkrel 2
 Summary:        C++ Jabber/XMPP library
 URL:            http://camaya.net/gloox/
 Source0:	http://camaya.net/download/%{name}-%{version}.tar.bz2
