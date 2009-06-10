@@ -1,4 +1,4 @@
-#%define _requires_exceptions libresolv.so.2(GLIBC_PRIVATE)
+#define _requires_exceptions libresolv.so.2(GLIBC_PRIVATE)
 
 %define lib_major       7
 %define lib_name        %mklibname %{name} %{lib_major}
@@ -8,8 +8,8 @@
 %bcond_with     gnutls
 
 Name:           gloox
-Version:        0.9.9.5
-Release:        %mkrel 2
+Version:        0.9.9.7
+Release:        %mkrel 1
 Summary:        C++ Jabber/XMPP library
 URL:            http://camaya.net/gloox/
 Source0:	http://camaya.net/download/%{name}-%{version}.tar.bz2
