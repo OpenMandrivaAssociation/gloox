@@ -8,7 +8,7 @@
 %bcond_with     gnutls
 
 Name:           gloox
-Version:        0.9.9.7
+Version:        0.9.9.9
 Release:        %mkrel 1
 Summary:        C++ Jabber/XMPP library
 URL:            http://camaya.net/gloox/
