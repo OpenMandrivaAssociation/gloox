@@ -1,6 +1,6 @@
 #define _requires_exceptions libresolv.so.2(GLIBC_PRIVATE)
 
-%define lib_major       7
+%define lib_major       8
 %define lib_name        %mklibname %{name} %{lib_major}
 %define lib_name_d      %mklibname %{name} -d
 %define lib_name_d_s    %mklibname %{name} -d -s
@@ -8,7 +8,7 @@
 %bcond_with     gnutls
 
 Name:           gloox
-Version:        0.9.9.9
+Version:        1.0
 Release:        %mkrel 1
 Summary:        C++ Jabber/XMPP library
 URL:            http://camaya.net/gloox/
@@ -69,6 +69,10 @@ Headers for %{name} librairies.
 %setup -q
 
 %build
+
+# 11/11/2009 fix underlinking
+export PTHREAD_LIBS="-lpthread"
+
 %{configure2_5x} \
 %if %with gnutls
         --with-gnutls      \
