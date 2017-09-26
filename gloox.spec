@@ -1,6 +1,6 @@
 #define _requires_exceptions libresolv.so.2(GLIBC_PRIVATE)
 
-%define lib_major       8
+%define lib_major       17
 %define lib_name        %mklibname %{name} %{lib_major}
 %define lib_name_d      %mklibname %{name} -d
 %define lib_name_d_s    %mklibname %{name} -d -s
@@ -8,19 +8,19 @@
 %bcond_with     gnutls
 
 Name:           gloox
-Version:        1.0
-Release:        5
+Version:        1.0.20
+Release:        1
 Summary:        C++ Jabber/XMPP library
 URL:            http://camaya.net/gloox/
 Source0:	http://camaya.net/download/%{name}-%{version}.tar.bz2
 License:        GPLv2+
 Group:          Networking/Remote access
 BuildRequires:  libidn-devel
-BuildRequires:  libiksemel-devel
+BuildRequires:  pkgconfig(iksemel)
 %if %with gnutls
 BuildRequires:  libgnutls-devel
 %else
-BuildRequires:  libopenssl-devel
+BuildRequires:  pkgconfig(openssl)
 %endif
 
 %description
