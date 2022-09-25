@@ -1,0 +1,177 @@
+diff -up gloox-1.0.24/src/examples/adhoc_example.cpp.omv~ gloox-1.0.24/src/examples/adhoc_example.cpp
+--- gloox-1.0.24/src/examples/adhoc_example.cpp.omv~	2022-09-26 00:05:55.310401951 +0200
++++ gloox-1.0.24/src/examples/adhoc_example.cpp	2022-09-26 00:06:01.298436630 +0200
+@@ -25,7 +25,7 @@ using namespace gloox;
+ #include <string>
+ 
+ #include <cstdio> // [s]print[f]
+-
++#include <ctime>
+ 
+ class AdhocTest : public ConnectionListener, AdhocCommandProvider, LogHandler
+ {
+diff -up gloox-1.0.24/src/examples/annotations_example.cpp.omv~ gloox-1.0.24/src/examples/annotations_example.cpp
+--- gloox-1.0.24/src/examples/annotations_example.cpp.omv~	2022-09-26 00:07:07.727819811 +0200
++++ gloox-1.0.24/src/examples/annotations_example.cpp	2022-09-26 00:07:12.456846988 +0200
+@@ -22,6 +22,7 @@ using namespace gloox;
+ #include <string>
+ 
+ #include <cstdio> // [s]print[f]
++#include <ctime>
+ 
+ class AnnotationsTest : public AnnotationsHandler, ConnectionListener
+ {
+diff -up gloox-1.0.24/src/examples/bookmarkstorage_example.cpp.omv~ gloox-1.0.24/src/examples/bookmarkstorage_example.cpp
+--- gloox-1.0.24/src/examples/bookmarkstorage_example.cpp.omv~	2022-09-26 00:06:54.588744236 +0200
++++ gloox-1.0.24/src/examples/bookmarkstorage_example.cpp	2022-09-26 00:06:59.522772627 +0200
+@@ -22,6 +22,7 @@ using namespace gloox;
+ #include <string>
+ 
+ #include <cstdio> // [s]print[f]
++#include <ctime>
+ 
+ class BookmarkStorageTest : public BookmarkHandler, ConnectionListener
+ {
+diff -up gloox-1.0.24/src/examples/component_example.cpp.omv~ gloox-1.0.24/src/examples/component_example.cpp
+--- gloox-1.0.24/src/examples/component_example.cpp.omv~	2022-09-26 00:06:40.277661803 +0200
++++ gloox-1.0.24/src/examples/component_example.cpp	2022-09-26 00:06:45.970694610 +0200
+@@ -22,6 +22,7 @@ using namespace gloox;
+ #include <string>
+ 
+ #include <cstdio> // [s]print[f]
++#include <ctime>
+ 
+ class ComponentTest : public DiscoHandler, ConnectionListener, LogHandler
+ {
+diff -up gloox-1.0.24/src/examples/disco_example.cpp.omv~ gloox-1.0.24/src/examples/disco_example.cpp
+--- gloox-1.0.24/src/examples/disco_example.cpp.omv~	2022-09-26 00:05:41.096319537 +0200
++++ gloox-1.0.24/src/examples/disco_example.cpp	2022-09-26 00:05:47.921359126 +0200
+@@ -24,6 +24,7 @@ using namespace gloox;
+ #include <string>
+ 
+ #include <cstdio> // [s]print[f]
++#include <ctime>
+ 
+ class DiscoTest : public DiscoHandler, ConnectionListener, LogHandler
+ {
+diff -up gloox-1.0.24/src/examples/ft_recv.cpp.omv~ gloox-1.0.24/src/examples/ft_recv.cpp
+--- gloox-1.0.24/src/examples/ft_recv.cpp.omv~	2022-09-26 00:08:00.432122001 +0200
++++ gloox-1.0.24/src/examples/ft_recv.cpp	2022-09-26 00:08:06.203155000 +0200
+@@ -27,6 +27,7 @@ using namespace gloox;
+ #include <string>
+ 
+ #include <cstdio> // [s]print[f]
++#include <ctime>
+ 
+ #if defined( WIN32 ) || defined( _WIN32 )
+ # include <windows.h>
+diff -up gloox-1.0.24/src/examples/privacylist_example.cpp.omv~ gloox-1.0.24/src/examples/privacylist_example.cpp
+--- gloox-1.0.24/src/examples/privacylist_example.cpp.omv~	2022-09-26 00:07:20.322892164 +0200
++++ gloox-1.0.24/src/examples/privacylist_example.cpp	2022-09-26 00:07:24.813917943 +0200
+@@ -22,6 +22,7 @@ using namespace gloox;
+ #include <string>
+ 
+ #include <cstdio> // [s]print[f]
++#include <ctime>
+ 
+ class PLTest : public PrivacyListHandler, ConnectionListener
+ {
+diff -up gloox-1.0.24/src/examples/privatexml_example.cpp.omv~ gloox-1.0.24/src/examples/privatexml_example.cpp
+--- gloox-1.0.24/src/examples/privatexml_example.cpp.omv~	2022-09-26 00:06:25.417576079 +0200
++++ gloox-1.0.24/src/examples/privatexml_example.cpp	2022-09-26 00:06:30.842607392 +0200
+@@ -22,6 +22,7 @@ using namespace gloox;
+ #include <string>
+ 
+ #include <cstdio> // [s]print[f]
++#include <ctime>
+ 
+ class PrivateXMLTest : public PrivateXMLHandler, ConnectionListener
+ {
+diff -up gloox-1.0.24/src/examples/register_example.cpp.omv~ gloox-1.0.24/src/examples/register_example.cpp
+--- gloox-1.0.24/src/examples/register_example.cpp.omv~	2022-09-26 00:05:21.117203461 +0200
++++ gloox-1.0.24/src/examples/register_example.cpp	2022-09-26 00:05:29.763253728 +0200
+@@ -22,6 +22,7 @@ using namespace gloox;
+ #include <string>
+ 
+ #include <cstdio> // [s]print[f]
++#include <ctime>
+ 
+ class RegTest : public RegistrationHandler, ConnectionListener, LogHandler
+ {
+diff -up gloox-1.0.24/src/examples/reset_example.cpp.omv~ gloox-1.0.24/src/examples/reset_example.cpp
+--- gloox-1.0.24/src/examples/reset_example.cpp.omv~	2022-09-26 00:07:44.213029165 +0200
++++ gloox-1.0.24/src/examples/reset_example.cpp	2022-09-26 00:07:49.013056653 +0200
+@@ -23,6 +23,7 @@ using namespace gloox;
+ #include <string>
+ 
+ #include <cstdio> // [s]print[f]
++#include <ctime>
+ 
+ class RosterTest : public ConnectionListener, LogHandler
+ {
+diff -up gloox-1.0.24/src/examples/roster_example.cpp.omv~ gloox-1.0.24/src/examples/roster_example.cpp
+--- gloox-1.0.24/src/examples/roster_example.cpp.omv~	2022-09-26 00:06:09.024481342 +0200
++++ gloox-1.0.24/src/examples/roster_example.cpp	2022-09-26 00:06:15.181516944 +0200
+@@ -27,6 +27,7 @@ using namespace gloox;
+ #include <string>
+ 
+ #include <cstdio> // [s]print[f]
++#include <ctime>
+ 
+ class RosterTest : public RosterListener, ConnectionListener, LogHandler, MessageHandler
+ {
+diff -up gloox-1.0.24/src/examples/vcard_example.cpp.omv~ gloox-1.0.24/src/examples/vcard_example.cpp
+--- gloox-1.0.24/src/examples/vcard_example.cpp.omv~	2022-09-26 00:07:32.581962504 +0200
++++ gloox-1.0.24/src/examples/vcard_example.cpp	2022-09-26 00:07:37.620991393 +0200
+@@ -26,6 +26,7 @@ using namespace gloox;
+ #include <string>
+ 
+ #include <cstdio> // [s]print[f]
++#include <ctime>
+ 
+ class VCardTest : public ConnectionListener, LogHandler, VCardHandler
+ {
+diff -up gloox-1.0.24/src/tests/tag/tag_perf.cpp.omv~ gloox-1.0.24/src/tests/tag/tag_perf.cpp
+--- gloox-1.0.24/src/tests/tag/tag_perf.cpp.omv~	2022-09-26 00:04:28.269895028 +0200
++++ gloox-1.0.24/src/tests/tag/tag_perf.cpp	2022-09-26 00:04:40.518966705 +0200
+@@ -20,6 +20,7 @@ using namespace gloox;
+ #include <cstdlib>
+ #include <string>
+ #include <cstdio> // [s]print[f]
++#include <ctime>
+ 
+ #include <sys/time.h>
+ 
+diff -up gloox-1.0.24/src/tests/zlib/zlib_perf.cpp.omv~ gloox-1.0.24/src/tests/zlib/zlib_perf.cpp
+--- gloox-1.0.24/src/tests/zlib/zlib_perf.cpp.omv~	2022-09-26 00:04:59.820079415 +0200
++++ gloox-1.0.24/src/tests/zlib/zlib_perf.cpp	2022-09-26 00:05:07.581124658 +0200
+@@ -24,6 +24,7 @@ using namespace gloox;
+ #include <string>
+ #include <sys/time.h>
+ #include <cstdio> // [s]print[f]
++#include <ctime>
+ 
+ #ifdef HAVE_ZLIB
+ 
+diff -up gloox-1.0.24/src/examples/e2ee_client.cpp.omv~ gloox-1.0.24/src/examples/e2ee_client.cpp
+--- gloox-1.0.24/src/examples/e2ee_client.cpp.omv~	2022-09-26 00:25:01.631292065 +0200
++++ gloox-1.0.24/src/examples/e2ee_client.cpp	2022-09-26 00:25:07.683339898 +0200
+@@ -29,6 +29,7 @@ using namespace gloox;
+ #include <string>
+ 
+ #include <cstdio> // [s]print[f]
++#include <ctime>
+ 
+ #ifdef WIN32
+ #include <windows.h>
+diff -up gloox-1.0.24/src/examples/e2ee_server.cpp.omv~ gloox-1.0.24/src/examples/e2ee_server.cpp
+--- gloox-1.0.24/src/examples/e2ee_server.cpp.omv~	2022-09-26 00:25:15.689402948 +0200
++++ gloox-1.0.24/src/examples/e2ee_server.cpp	2022-09-26 00:25:21.279446819 +0200
+@@ -29,6 +29,7 @@ using namespace gloox;
+ #include <string>
+ 
+ #include <cstdio> // [s]print[f]
++#include <ctime>
+ 
+ #ifdef WIN32
+ #include <windows.h>
