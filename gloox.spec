@@ -5,7 +5,7 @@
 %define lib_name_d      %mklibname %{name} -d
 %define lib_name_d_s    %mklibname %{name} -d -s
 
-%bcond_without  gnutls
+%bcond_with  gnutls
 
 Name:           gloox
 Version:	1.0.24
@@ -19,7 +19,7 @@ Group:          Networking/Remote access
 BuildRequires:  libidn-devel
 BuildRequires:  pkgconfig(iksemel)
 %if %with gnutls
-BuildRequires:  libgnutls-devel
+BuildRequires:  pkgconfig(gnutls)
 %else
 BuildRequires:  pkgconfig(openssl)
 %endif
