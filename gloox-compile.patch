@@ -1,0 +1,12 @@
+diff -up gloox-1.0.28/src/tlsopensslclient.cpp.omv~ gloox-1.0.28/src/tlsopensslclient.cpp
+--- gloox-1.0.28/src/tlsopensslclient.cpp.omv~	2023-11-26 03:19:43.111590483 +0100
++++ gloox-1.0.28/src/tlsopensslclient.cpp	2023-11-26 03:20:11.759906979 +0100
+@@ -51,7 +51,7 @@ namespace gloox
+     {
+       unsigned char buf[32];
+       const char* const label = "EXPORTER-Channel-Binding";
+-      SSL_export_keying_material( m_ssl, buf, 32, label, strlen( label ), { 0 }, 1, 0 );
++      SSL_export_keying_material( m_ssl, buf, 32, label, strlen( label ), reinterpret_cast<const unsigned char*>("\0"), 1, 0 );
+       return std::string( reinterpret_cast<char* const>( buf ), 32 );
+     }
+     else
