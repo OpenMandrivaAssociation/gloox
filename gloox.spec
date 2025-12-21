@@ -16,6 +16,11 @@ Source0:	http://camaya.net/download/%{name}-%{version}.tar.bz2
 Patch0:		gloox-compile.patch
 License:        GPLv2+
 Group:          Networking/Remote access
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:  libidn-devel
 BuildRequires:  pkgconfig(iksemel)
 %if %with gnutls
